@@ -31,11 +31,8 @@ def monthly_challenge_view_int(request, month):
 
 def monthly_challenge(request, month):
     month_name = monthly_challenges_dict[month]
-    return render(request, "challenges/challenge.html")
+    return render(request, "challenges/challenge.html", {"month_key": month_name,"month_code": month})
     
-    
-
-
 def month_list(request):
     data = list(map(_map_month, list(monthly_challenges_dict.keys())))
     raw_response = "".join(data)
