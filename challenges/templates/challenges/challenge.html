@@ -2,6 +2,7 @@
 {% block page_title %}Monthly Challenge{% endblock page_title %}
 
 {% block content %}
+    {% include "./includes/header.html" %}
     <h1>Short code name is {{ month_code|upper }}</h1>
     <h1>{{ month_key|title }}</h1>
     {% if month_code in 'mar,apr' %}
