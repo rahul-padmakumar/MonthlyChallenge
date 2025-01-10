@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monthly Challenge</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block page_title %}Monthly Challenge{% endblock page_title %}
+
+{% block content %}
     <h1>Short code name is {{ month_code|upper }}</h1>
     <h1>{{ month_key|title }}</h1>
     {% if month_code in 'mar,apr' %}
-    <p>Summer Season</p>
+        <p>Summer Season</p>
     {% elif month_code in 'may,jun,jul,aug' %}
-    <p>Autumn Season</p>
+        <p>Autumn Season</p>
     {% elif month_code in 'sep,oct,nov' %}
-    <p>Spring Season</p>
+        <p>Spring Season</p>
     {% else %}
-    <p>Winter Season</p>
+        <p>Winter Season</p>
     {% endif %}
-</body>
-</html>
+{% endblock content %}
