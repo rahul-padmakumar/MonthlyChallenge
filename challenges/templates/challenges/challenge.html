@@ -8,5 +8,14 @@
 <body>
     <h1>Short code name is {{ month_code|upper }}</h1>
     <h1>{{ month_key|title }}</h1>
+    {% if month_code in 'mar,apr' %}
+    <p>Summer Season</p>
+    {% elif month_code in 'may,jun,jul,aug' %}
+    <p>Autumn Season</p>
+    {% elif month_code in 'sep,oct,nov' %}
+    <p>Spring Season</p>
+    {% else %}
+    <p>Winter Season</p>
+    {% endif %}
 </body>
 </html>
